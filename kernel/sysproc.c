@@ -7,6 +7,7 @@
 #include "sysfunc.h"
 /*
 
+notes for mini project 1
 int pidCounter = 0;
 
 int sys_getPidCount(void) {
@@ -17,6 +18,9 @@ int sys_getPidCount(void) {
 //also, in the sys_getpid syscall, i need to increment pidCounter
 
 */
+
+int pidCounter = 0;
+
 
 int
 sys_fork(void)
@@ -50,7 +54,14 @@ sys_kill(void)
 int
 sys_getpid(void)
 {
+  pidCounter++;//increment pidCounter when getpid is called
   return proc->pid;
+}
+
+//implemented new syscall getpidcount which will just return the pid counter
+int sys_getpidcount(void) 
+{
+  return pidCounter;
 }
 
 int

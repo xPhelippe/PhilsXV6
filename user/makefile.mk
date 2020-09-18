@@ -1,7 +1,6 @@
 
 # user programs
 USER_PROGS := \
-	phil\
 	cat\
 	echo\
 	forktest\
@@ -17,8 +16,8 @@ USER_PROGS := \
 	tester\
 	usertests\
 	wc\
-	zombie
-
+	zombie\
+	getpidcounttest
 USER_PROGS := $(addprefix user/, $(USER_PROGS))
 
 # user library files

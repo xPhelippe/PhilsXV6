@@ -25,6 +25,7 @@ int getpid(void);
 char* sbrk(int);
 int sleep(int);
 int uptime(void);
+int getpidcount(void);//implemented new syscall for mini project 1
 
 // user library functions (ulib.c)
 int stat(char*, struct stat*);
