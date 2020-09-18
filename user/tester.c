@@ -8,6 +8,15 @@
 int
 main(int argc, char *argv[])
 {
-  printf(1, "%s", "** Placeholder program for grading scripts **\n");
-  exit();
+	printf(0, "Starting test for getpidcount \n");
+	int rc = fork();
+	
+	if(rc == 0) {
+		char* args[] = {"getpidcounttest", NULL};
+		exec(args[0], args);
+	} else {
+		wait();
+		printf(0, "getpidcount test finished \n");
+	}
+	exit();
 }
