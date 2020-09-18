@@ -23,6 +23,7 @@
 #define SYS_sbrk   19
 #define SYS_sleep  20
 #define SYS_uptime 21
+#define SYS_getpidcount 22
 
 //need to register system calls here
 //each system call needs to have a unique id
