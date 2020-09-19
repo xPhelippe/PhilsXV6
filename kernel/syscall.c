@@ -7,8 +7,6 @@
 #include "syscall.h"
 #include "sysfunc.h"
 
-//custom definition of getpidcount() for miniproject 1
-extern int sys_getpidcount(void);
 
 // User code makes a system call with INT T_SYSCALL.
 // System call number in %eax.

@@ -5,21 +5,7 @@
 #include "mmu.h"
 #include "proc.h"
 #include "sysfunc.h"
-/*
 
-notes for mini project 1
-int pidCounter = 0;
-
-int sys_getPidCount(void) {
-
-	return pidCounter
-}
-
-//also, in the sys_getpid syscall, i need to increment pidCounter
-
-*/
-
-int pidCounter = 0;
 
 
 int
@@ -50,6 +36,9 @@ sys_kill(void)
     return -1;
   return kill(pid);
 }
+
+
+int pidCounter = 0;
 
 int
 sys_getpid(void)
